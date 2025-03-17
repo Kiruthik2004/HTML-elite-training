@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+</head>
+<body>
+
+    <h2>Payment Details</h2>
+
+    <form action="confirmation.html" method="POST">
+        <h3>Personal Information</h3>
+        <label for="name">Full Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="phone">Phone Number:</label><br>
+        <input type="tel" id="phone" name="phone" required><br><br>
+
+        <label for="address">Address:</label><br>
+        <textarea id="address" name="address" rows="4" required></textarea><br><br>
+
+        <h3>Select Payment Method</h3>
+        <input type="radio" id="card" name="payment_method" value="card" required>
+        <label for="card">Credit/Debit Card</label><br>
+
+        <input type="radio" id="bank" name="payment_method" value="bank">
+        <label for="bank">Bank Transfer</label><br><br>
+
+        <div id="card-details">
+            <h3>Card Payment</h3>
+            <label for="card-number">Card Number:</label><br>
+            <input type="text" id="card-number" name="card-number" pattern="\d{16}" maxlength="16" placeholder="1234 5678 9012 3456"><br><br>
+
+            <label for="expiry">Expiry Date:</label><br>
+            <input type="month" id="expiry" name="expiry"><br><br>
+
+            <label for="cvv">CVV:</label><br>
+            <input type="password" id="cvv" name="cvv" pattern="\d{3}" maxlength="3" placeholder="123"><br><br>
+        </div>
+
+        <div id="bank-details">
+            <h3>Bank Transfer</h3>
+            <label for="account-id">Account ID:</label><br>
+            <input type="text" id="account-id" name="account-id" placeholder="Enter Account ID"><br><br>
+
+            <label for="ifsc">IFSC Code:</label><br>
+            <input type="text" id="ifsc" name="ifsc" placeholder="Enter IFSC Code"><br><br>
+        </div>
+
+        <input type="submit" value="Proceed to Payment">
+    </form>
+
+</body>
+</html>
